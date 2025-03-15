@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Coffee</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('images/AnhNenCoffee.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            padding-top: 80px; /* Để tránh menu che nội dung */
+        }
+        
+        header {
+            background: rgba(124, 119, 119, 0.6);
+            color: white;
+            padding: 15px;
+            font-size: 24px;
+            font-weight: bold;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            position: absolute;
+            left: 20px;
+        }
+
+        .title {
+            text-align: center;
+            flex-grow: 1;
+        }
+        
+        /* Thanh menu */
+        nav {
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 0;
+            position: fixed;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            z-index: 999;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            font-size: 18px;
+            margin: 0 15px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #ff9800;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: auto;
+            padding-top: 50px;
+        }
+
+        .sidebar {
+            width: 250px;
+            
+            padding: 20px;
+            color: white;
+            height: calc(100vh - 100px);
+            border-radius: 5px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            background: #9c9a98;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .sidebar button:hover {
+            background: #e68900;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 32px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(124, 119, 119, 0.6);
+        }
+
+        p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            font-weight: 300;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .sidebar {
+                width: 100%;
+                text-align: center;
+                height: auto;
+                padding: 10px;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <header>
+        <div class="logo">T&2K</div>
+        <div class="title">Quản Lý Coffee</div>
+    </header>
+
+    <nav>
+        <a href="#home">HOME</a>
+        <a href="#about">ABOUT</a>
+        <a href="#menu">MENU</a>
+        <a href="#specials">SPECIALS</a>
+        <a href="#events">EVENTS</a>
+        <a href="#contacts">CONTACTS</a>
+    </nav>
+
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <li><button>Thêm sản phẩm</button></li>
+                <li><button>Xem đơn hàng</button></li>
+                <li><button>Quản lý nhân viên</button></li>
+                <li><button>Thống kê doanh thu</button></li>
+            </ul>
+        </nav>
+        <main>
+            <h2>Chào mừng đến với hệ thống quản lý</h2>
+            <p>Chọn một chức năng từ menu bên trái để bắt đầu.</p>
+        </main>
+    </div>
+</body>
+</html>
